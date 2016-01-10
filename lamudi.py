@@ -21,7 +21,7 @@ def scrape(params=None, payload=None):
 def parse_html(data):
 	if data:
 		soup = BeautifulSoup(data)
-		divs = soup.find('div', class_="listing-info")
+		divs = soup.find_all('div', class_="listing-info")
 		return divs
 
 def scrape_all(loop=True):
